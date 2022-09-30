@@ -1,7 +1,6 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-
 module.exports = {
   plugins: [
     "gatsby-plugin-gatsby-cloud",
@@ -14,23 +13,29 @@ module.exports = {
         collectionTypes: [
           {
             singularName: "article",
-            queryParams: {
-              publicationState:
-                process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
-              populate: {
-                cover: "*",
-                blocks: {
-                  populate: "*",
-                },
-              },
-            },
+            // queryParams: {
+            //   publicationState:
+            //     process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
+            //   populate: {
+            //     cover: "*",
+            //     blocks: {
+            //       populate: "*",
+            //     },
+            //   },
+            // },
           },
           {
             singularName: "author",
           },
           {
+            singularName: "industry",
+          },
+          {
             singularName: "category",
           },
+          // {
+          //   singularName: "user-request",
+          // },
         ],
         singleTypes: [
           {

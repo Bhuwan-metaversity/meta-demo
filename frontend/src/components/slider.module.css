@@ -1,0 +1,22 @@
+/* Slideshow */
+
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  height: 650px;
+  max-width: 100%;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  height: 100%;
+  transition: 2s ease-in-out;
+  width: 100%;
+}
+.slide {
+  height: 640px;
+  display: block;
+  width: 100vw;
+  border-radius: 40px;
+}
