@@ -1,9 +1,9 @@
 import { ArrowForward } from "@mui/icons-material"
-import { Button, Typography } from "@mui/material"
+import { Button, Typography, useMediaQuery } from "@mui/material"
 import { Box } from "@mui/system"
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 function TopServices() {
   const { allStrapiArticle } = useStaticQuery(graphql`
@@ -22,9 +22,12 @@ function TopServices() {
               localFile {
                 url
                 childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(
+                    webpOptions: { quality: 100 }
+                    formats: WEBP
+                    layout: CONSTRAINED
+                    aspectRatio: 1.5
+                  )
                 }
               }
             }
@@ -33,28 +36,37 @@ function TopServices() {
       }
     }
   `)
+  const media = useMediaQuery("(min-width:600px)")
   return (
     <Box id="top">
       <Typography
         variant="h3"
-        sx={{ fontSize: "40px", fontWeight: 500 }}
-        m={5}
+        // sx={{ fontSize: "40px", fontWeight: 500 }}
+        m={2}
         textAlign={"center"}
       >
         Our Top Services
       </Typography>
       {allStrapiArticle.edges?.map(({ node: item }, index) => (
         <Box
-          display={"flex"}
+          // display={"flex"}
           flexDirection={index % 2 === 0 ? "row" : "row-reverse"}
           flex={1}
+          sx={{
+            display: { xs: "block", md: "flex" },
+          }}
         >
-          <Box>
-            <Img
-              fluid={item.cover.localFile.childImageSharp.fluid}
+          <Box my={6}>
+            <GatsbyImage
+              image={item.cover.localFile.childImageSharp.gatsbyImageData}
               alt={item.title}
               // src={process.env.STRAPI_API_URL + item.cover.url}
-              style={{ flex: 1, aspectRatio: "15/10", width: "50vw" }}
+              style={{
+                flex: 1,
+                // aspectRatio: "15/10",
+                width: media ? "42.5vw" : "85vw",
+                borderRadius: "24px",
+              }}
             />
           </Box>
           <Box margin={"auto"} flex={1} px={"5%"} textAlign="center">
@@ -62,7 +74,7 @@ function TopServices() {
               {item.title}
             </Typography>
             <Typography m={3}>{item.description}</Typography>
-            <Link to={"article/" + item?.slug}>
+            <Link to={"service/" + item?.slug}>
               <Button variant="contained" endIcon={<ArrowForward />}>
                 Read More
               </Button>

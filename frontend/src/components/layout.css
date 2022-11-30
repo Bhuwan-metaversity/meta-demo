@@ -84,6 +84,12 @@ img {
   border-style: none;
   max-width: 100%;
 }
+.social {
+  width: 25px;
+  border-radius: 25px;
+  background: #fff;
+  height: 25px;
+}
 code,
 kbd,
 pre,
@@ -177,7 +183,7 @@ li > p {
   margin-bottom: calc(var(--space-4) / 2);
 }
 p {
-  max-width: 680px;
+  /* max-width: 680px; */
 }
 code {
   font-size: 0.875rem;

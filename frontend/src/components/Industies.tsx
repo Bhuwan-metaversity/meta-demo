@@ -1,6 +1,7 @@
-import { Box, Typography } from "@mui/material"
+import { Box, Grid, Typography } from "@mui/material"
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 function Industies() {
   const { allStrapiIndustry } = useStaticQuery(graphql`
@@ -11,10 +12,11 @@ function Industies() {
             id
             name
             coverSquare {
-              id
-              name
-              url
-              alternativeText
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(layout: CONSTRAINED)
+                }
+              }
             }
           }
         }
@@ -24,20 +26,23 @@ function Industies() {
   `)
 
   return (
-    <div>
-      <Box>
-        <Typography variant="h5" fontSize="40px">
-          Industries
-        </Typography>
+    <div id="industries">
+      <Typography variant="h3" textAlign="center" m={6} mt={9}>
+        Industries
+      </Typography>
+      {/* <Box display=" grid" gridTemplateColumns="repeat(3, 1fr)" gap="32px">*/}
+      <Grid container gap={4} mb={7}>
         {allStrapiIndustry.edges.map(({ node: { id, name, coverSquare } }) => (
-          <Box
+          <Grid
+            item
+            lg={3.75}
+            md={5.75}
+            xs={12}
             key={id}
             sx={{
-              height: 400,
-              width: 400,
-              backgroundImage: `url(${
-                process.env.STRAPI_API_URL + coverSquare?.url
-              })`,
+              // height: "27vw",
+              width: "auto",
+              aspectRatio: "1/1",
               backgroundClip: "border-box",
               backgroundSize: "cover",
               display: "flex",
@@ -45,13 +50,28 @@ function Industies() {
               borderRadius: "16px",
             }}
           >
-            {" "}
-            <Typography m={3} fontSize={"20px"} color="white">
+            <GatsbyImage
+              alt={"adsfjka"}
+              // layout="fill"
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+              // objectFit={"fill"}
+              image={coverSquare.localFile.childImageSharp.gatsbyImageData}
+            />
+
+            <Typography
+              position={"absolute"}
+              m={3}
+              fontSize={"20px"}
+              color="white"
+            >
               {name}
             </Typography>
-          </Box>
+          </Grid>
         ))}
-      </Box>
+      </Grid>
     </div>
   )
 }

@@ -15,18 +15,35 @@ import Footer from "./Footer"
 
 const theme = createTheme({
   palette: {
-    primary: { main: "#3A7EF8" },
+    primary: {
+      main: "#3A7EF8",
+    },
   },
   components: {
     MuiButton: {
       styleOverrides: {
-        root: {
+        root: ({ ownerState }) => ({
           textTransform: "none",
+          "&:hover": {
+            ...((ownerState.color === "primary" || "default") &&
+              ownerState.variant === "contained" && {
+                backgroundColor: "#508EFF",
+                transition: "0.2s",
+              }),
+          },
+        }),
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          fontFamily: "Space Grotesk",
         },
       },
     },
   },
-})
+});
+
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>

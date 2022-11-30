@@ -1,6 +1,8 @@
 import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
-import { Box, IconButton } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import { Link } from "gatsby";
+import { AnimatePresence, motion } from "framer-motion";
 import * as styles from "./slider.module.css";
 
 export interface VSProps {
@@ -17,8 +19,9 @@ const Vertical2by2Slider: React.FC<VSProps> = ({
   itemsPerPage = 2,
 }) => {
   const [counter, setCounter] = useState(0);
+  let timer;
   useEffect(() => {
-    setTimeout(
+    timer = setTimeout(
       () =>
         setCounter((prev) =>
           prev >= Math.floor(items?.length) - 1 ? 0 : prev + 1
@@ -26,20 +29,23 @@ const Vertical2by2Slider: React.FC<VSProps> = ({
       timeOut
     );
 
-    return () => {};
+    return () => {
+      clearTimeout(timer);
+    };
   }, [counter, items?.length, timeOut, setCounter, itemsPerPage]);
   const slides: any[] = [];
 
   const handleUpClick = () => {
-    setCounter((o) => (o === 0 ? items.length : o - 1));
+    setCounter((o) => (o === 0 ? items.length - 1 : o - 1));
   };
   const handleDownClick = () => {
-    if (counter === items.length) {
+    if (counter === items.length - 1) {
       setCounter(0);
     } else {
       setCounter((o) => o + 1);
     }
   };
+
   for (let index = 0; index < items?.length; index++) {
     slides.push(
       <Box className={styles.slide} key={`slides${index}/${items.length}`}>
@@ -51,25 +57,64 @@ const Vertical2by2Slider: React.FC<VSProps> = ({
     <Box className={styles.slideshow}>
       <Box
         position="absolute"
-        top={0}
-        right={0}
+        top={{ xs: 50, md: 200 }}
+        right={{ xs: 5, md: 15 }}
         display={"flex"}
         flexDirection="column"
         zIndex={5}
       >
         <IconButton onClick={handleUpClick}>
-          <ArrowUpward />
+          <ArrowUpward sx={{ fontSize: { xs: "small", md: "1.5rem" } }} />
         </IconButton>{" "}
         <IconButton onClick={handleDownClick}>
-          <ArrowDownward />
+          <ArrowDownward sx={{ fontSize: { xs: "small", md: "1.5rem" } }} />
         </IconButton>
       </Box>
       <Box
+        sx={{
+          display: { xs: "none", md: "block" },
+          position: "absolute",
+          rotate: "-90deg",
+          top: 250,
+          left: -100,
+          justifyContent: "center",
+          textAlign: "center",
+        }}
+      >
+        <Link to="https://twitter.com/MetaversityTech" target={"_blank"}>
+          Linked In
+        </Link>
+        <Link
+          to="https://www.facebook.com/profile.php?id=100087924176394"
+          target={"_blank"}
+          style={{ margin: "40px" }}
+        >
+          Facebook
+        </Link>
+        <Link
+          to="https://www.linkedin.com/company/metaversity-technologies"
+          target={"_blank"}
+        >
+          Twitter
+        </Link>
+      </Box>
+      {/* <Box
         className={styles.slideshowSlider}
         sx={{ transform: `translate3d(0,${-counter * 100}%, 0)` }}
-      >
-        {slides}
-      </Box>
+      > */}
+      <AnimatePresence mode="sync">
+        <motion.div
+          key={counter}
+          initial={{ y: 800 }}
+          animate={{ y: 0 }}
+          exit={{ opacity: 0, scale: 0.6, position: "absolute" }}
+          transition={{ duration: 1.5 }}
+        >
+          {slides[counter]}
+        </motion.div>
+      </AnimatePresence>
+      {/* {slides} */}
+      {/* </Box> */}
     </Box>
   );
 };

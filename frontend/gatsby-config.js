@@ -33,9 +33,9 @@ module.exports = {
           {
             singularName: "category",
           },
-          // {
-          //   singularName: "user-request",
-          // },
+          {
+            singularName: "hero-banner",
+          },
         ],
         singleTypes: [
           {
@@ -59,7 +59,17 @@ module.exports = {
               },
             },
           },
+          {
+            singularName: "background",
+          },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Oxygen\:300,400,700`, "Space Grotesk"],
+        display: "swap",
       },
     },
     "gatsby-plugin-image",

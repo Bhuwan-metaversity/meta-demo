@@ -1,44 +1,56 @@
 import React, { useState } from "react"
 import {
   Button,
+  ButtonProps,
+  ButtonPropsVariantOverrides,
   Dialog,
   DialogContent,
   DialogTitle,
   IconButton,
+  MenuItem,
   TextareaAutosize,
   TextField,
   Typography,
-} from "@mui/material"
-import { useFormik } from "formik"
-import { Close } from "@mui/icons-material"
-import { CallIcon } from "../images/call"
+} from "@mui/material";
+import { useFormik } from "formik";
+import { Close } from "@mui/icons-material";
+import { CallIcon } from "../images/call";
+import { CallBlueIcon } from "../images/callBlue";
+import { graphql, useStaticQuery } from "gatsby";
 
-function RequestCallButton() {
-  const [open, setOpen] = useState(false)
-  const handleClose = () => setOpen(false)
-
+function RequestCallButton({ isWhite }: { isWhite?: boolean }) {
+  const [open, setOpen] = useState(false);
+  const handleClose = () => setOpen(false);
+  const { allStrapiArticle } = useStaticQuery(graphql`
+    query {
+      allStrapiArticle {
+        nodes {
+          ServiceName
+          slug
+          id
+        }
+      }
+    }
+  `);
   const { values, handleChange, handleSubmit } = useFormik({
     initialValues: {
       name: "",
       contact: "",
       question: "",
+      email: "",
     },
     onSubmit: (values) => {
       fetch(process.env.STRAPI_API_URL + "/api/user-requests", {
         method: "POST",
         body: JSON.stringify({
-          data: {
-            name: values.name,
-            contact: values.contact,
-            question: values.question,
-          },
+          data: values,
         }),
         headers: {
           "Content-Type": "application/json",
         },
-      })
+      });
     },
-  })
+  });
   return (
     <>
       <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>
@@ -64,38 +76,59 @@ function RequestCallButton() {
               value={values.name}
             />
             <TextField
+              name="email"
+              placeholder="Email Address"
+              type={"email"}
+              margin="dense"
+              fullWidth
+              variant="outlined"
+              onChange={handleChange}
+              value={values.email}
+            />
+            <TextField
               name="contact"
               placeholder="Contact"
               margin="dense"
+              type="number"
               fullWidth
               variant="outlined"
               onChange={handleChange}
               value={values.contact}
             />
-            <TextareaAutosize
+            <TextField
+              select
               value={values.question}
               onChange={handleChange}
-              minRows={3}
-              cols={30}
               name="question"
-            />
-            <Button type="submit" fullWidth sx={{ m: 5 }} variant="outlined">
+              margin="dense"
+              fullWidth
+              label="Regarding "
+            >
+              {allStrapiArticle?.nodes?.map((item) => (
+                <MenuItem value={item.ServiceName}>{item.ServiceName}</MenuItem>
+              ))}
+            </TextField>
+            <Button type="submit" variant="contained" fullWidth sx={{ my: 5 }}>
               Submit Details
             </Button>
           </form>
         </DialogContent>
       </Dialog>
       <Button
-        variant="contained"
+        variant={isWhite ? "outlined" : "contained"}
         onClick={() => setOpen(true)}
-        sx={{ px: 3, py: 1 }}
-        startIcon={<CallIcon />}
+        sx={{
+          px: 3,
+          py: 1,
+          bgcolor: isWhite ? "white" : "",
+        }}
+        startIcon={isWhite ? <CallBlueIcon /> : <CallIcon />}
       >
         {" "}
         Request a call
       </Button>
     </>
-  )
+  );
 }
 
 export default RequestCallButton
