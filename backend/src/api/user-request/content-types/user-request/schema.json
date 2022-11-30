@@ -4,7 +4,8 @@
   "info": {
     "singularName": "user-request",
     "pluralName": "user-requests",
-    "displayName": "userRequest"
+    "displayName": "userRequest",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,10 @@
     },
     "contact": {
       "type": "biginteger"
+    },
+    "email": {
+      "type": "email",
+      "required": true
     }
   }
 }
