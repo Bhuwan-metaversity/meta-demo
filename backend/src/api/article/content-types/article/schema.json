@@ -15,10 +15,6 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text",
-      "maxLength": 80
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"
@@ -56,6 +52,9 @@
     },
     "ServiceName": {
       "type": "string"
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
