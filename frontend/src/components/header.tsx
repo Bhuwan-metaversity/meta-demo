@@ -101,8 +101,6 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import { GatsbyImage } from "gatsby-plugin-image";
 
 interface Props {
   /**
@@ -212,8 +210,8 @@ export default function DrawerAppBar(props: Props) {
                 <ListItemText primary={name} />
               </ListItemButton>
             </ListItem>
-            {sublinks?.map((item) => (
-              <ListItem key={item.to} disablePadding>
+            {sublinks?.map((item, index) => (
+              <ListItem key={item.to + "-" + index} disablePadding>
                 <ListItemButton href={to} sx={{ textAlign: "center" }}>
                   <ListItemText primary={item.name} />
                 </ListItemButton>

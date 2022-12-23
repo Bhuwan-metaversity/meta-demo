@@ -48,7 +48,15 @@ function RequestCallButton({ isWhite }: { isWhite?: boolean }) {
         headers: {
           "Content-Type": "application/json",
         },
-      });
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+          if (res?.data) {
+            setOpen(false);
+          }
+        })
+        .catch((err) => alert(err?.toString()));
     },
   });
   return (

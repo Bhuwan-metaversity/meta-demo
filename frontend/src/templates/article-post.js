@@ -1,25 +1,28 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import Layout from "../components/layout"
+import React from "react";
+import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import Layout from "../components/layout";
 // import BlocksRenderer from "../components/blocks-renderer"
-import Seo from "../components/seo"
+import Seo from "../components/seo";
 
 const ArticlePage = ({ data }) => {
-  const article = data.strapiArticle
+  const article = data.strapiArticle;
 
   const seo = {
     metaTitle: article.title,
-    metaDescription: article.description,
+    metaDescription:
+      article.childrenStrapiArticleDescriptionTextnode[0].description,
     shareImage: article.cover,
-  }
+  };
 
   return (
     <Layout as="article">
       <Seo seo={seo} />
       <header className="container max-w-4xl py-8">
         <h1 className="text-6xl font-bold text-neutral-700">{article.title}</h1>
-        <p className="mt-4 text-2xl text-neutral-500">{article.description}</p>
+        <p className="mt-4 text-2xl text-neutral-500">
+          {article.childrenStrapiArticleDescriptionTextnode[0].description}
+        </p>
         <GatsbyImage
           image={getImage(article?.cover?.localFile)}
           alt={article?.cover?.alternativeText}
@@ -30,8 +33,8 @@ const ArticlePage = ({ data }) => {
         {/* <BlocksRenderer blocks={article.blocks || []} /> */}
       </main>
     </Layout>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
   query ($slug: String) {
@@ -39,7 +42,9 @@ export const pageQuery = graphql`
       id
       slug
       title
-      description
+      childrenStrapiArticleDescriptionTextnode {
+        description
+      }
       cover {
         alternativeText
         localFile {
@@ -51,6 +56,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default ArticlePage
+export default ArticlePage;

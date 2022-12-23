@@ -1,10 +1,16 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 module.exports = {
   plugins: [
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-postcss",
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "metaversity-website",
+      },
+    },
     {
       resolve: "gatsby-source-strapi",
       options: {
@@ -77,4 +83,4 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-transformer-remark",
   ],
-}
+};

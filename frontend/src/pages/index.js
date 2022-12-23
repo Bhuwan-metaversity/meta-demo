@@ -61,6 +61,7 @@ const IndexPage = ({ data }) => {
                   // objectFit={"contain"}
                   // imgStyle={{ objectFit: "contain" }}
                   style={{ width: "50vw", marginTop: "auto" }}
+                  alt="hero"
                   // fluid={banner.hero_cover.localFile.childImageSharp.fluid}
                   image={
                     banner.hero_cover.localFile.childImageSharp?.gatsbyImageData
@@ -74,6 +75,7 @@ const IndexPage = ({ data }) => {
         <Box m={"7.5vw"} mt={0} display="grid">
           <Box mb={15} gridArea="1/1">
             <GatsbyImage
+              alt="bg"
               layout="fullWidth"
               image={
                 strapiBackground.Videobg.localFile.childImageSharp
@@ -165,6 +167,7 @@ const IndexPage = ({ data }) => {
         </Box>
         <Box display={"grid"}>
           <GatsbyImage
+            alt ="bgi"
             style={{
               gridArea: "1/1",
               // You can set a maximum height for the image, if you wish.
@@ -174,7 +177,6 @@ const IndexPage = ({ data }) => {
             // You can optionally force an aspect ratio for the generated image
             // aspectRatio={3 / 1}
             // This is a presentational image, so the alt should be an empty string
-            alt=""
             // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
             image={
               strapiBackground.submitQueryBg.localFile.childImageSharp

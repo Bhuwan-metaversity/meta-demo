@@ -1,9 +1,9 @@
-import { ArrowForward } from "@mui/icons-material"
-import { Button, Typography, useMediaQuery } from "@mui/material"
-import { Box } from "@mui/system"
-import { graphql, Link, useStaticQuery } from "gatsby"
-import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { ArrowForward } from "@mui/icons-material";
+import { Button, Typography, useMediaQuery } from "@mui/material";
+import { Box } from "@mui/system";
+import { graphql, Link, useStaticQuery } from "gatsby";
+import React from "react";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 function TopServices() {
   const { allStrapiArticle } = useStaticQuery(graphql`
@@ -14,7 +14,9 @@ function TopServices() {
             id
             title
             slug
-            description
+            childrenStrapiArticleDescriptionTextnode {
+              description
+            }
             cover {
               id
               url
@@ -35,8 +37,8 @@ function TopServices() {
         }
       }
     }
-  `)
-  const media = useMediaQuery("(min-width:600px)")
+  `);
+  const media = useMediaQuery("(min-width:600px)");
   return (
     <Box id="top">
       <Typography
@@ -47,43 +49,48 @@ function TopServices() {
       >
         Our Top Services
       </Typography>
-      {allStrapiArticle.edges?.map(({ node: item }, index) => (
-        <Box
-          // display={"flex"}
-          flexDirection={index % 2 === 0 ? "row" : "row-reverse"}
-          flex={1}
-          sx={{
-            display: { xs: "block", md: "flex" },
-          }}
-        >
-          <Box my={6}>
-            <GatsbyImage
-              image={item.cover.localFile.childImageSharp.gatsbyImageData}
-              alt={item.title}
-              // src={process.env.STRAPI_API_URL + item.cover.url}
-              style={{
-                flex: 1,
-                // aspectRatio: "15/10",
-                width: media ? "42.5vw" : "85vw",
-                borderRadius: "24px",
-              }}
-            />
+      {allStrapiArticle.edges?.map(({ node: item }, index) => {
+        console.log(item);
+        return (
+          <Box
+            // display={"flex"}
+            flexDirection={index % 2 === 0 ? "row" : "row-reverse"}
+            flex={1}
+            sx={{
+              display: { xs: "block", md: "flex" },
+            }}
+          >
+            <Box my={6}>
+              <GatsbyImage
+                image={item.cover.localFile.childImageSharp.gatsbyImageData}
+                alt={item.title}
+                // src={process.env.STRAPI_API_URL + item.cover.url}
+                style={{
+                  flex: 1,
+                  // aspectRatio: "15/10",
+                  width: media ? "42.5vw" : "85vw",
+                  borderRadius: "24px",
+                }}
+              />
+            </Box>
+            <Box margin={"auto"} flex={1} px={"5%"} textAlign="center">
+              <Typography variant="h3" fontSize={"28px"}>
+                {item.title}
+              </Typography>
+              <Typography m={3}>
+                {item.childrenStrapiArticleDescriptionTextnode[0].description}
+              </Typography>
+              <Link to={"service/" + item?.slug}>
+                <Button variant="contained" endIcon={<ArrowForward />}>
+                  Read More
+                </Button>
+              </Link>
+            </Box>
           </Box>
-          <Box margin={"auto"} flex={1} px={"5%"} textAlign="center">
-            <Typography variant="h3" fontSize={"28px"}>
-              {item.title}
-            </Typography>
-            <Typography m={3}>{item.description}</Typography>
-            <Link to={"service/" + item?.slug}>
-              <Button variant="contained" endIcon={<ArrowForward />}>
-                Read More
-              </Button>
-            </Link>
-          </Box>
-        </Box>
-      ))}
+        );
+      })}
     </Box>
-  )
+  );
 }
 
-export default TopServices
+export default TopServices;
