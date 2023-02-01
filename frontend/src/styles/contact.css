@@ -204,7 +204,7 @@ margin-top: 20px;
 .footer-section1{
 width: 100%;
 height: 655px;
-background: linear-gradient(90.56deg, rgba(10, 47, 140, 0.8) 0.49%, rgba(37, 137, 202, 0.8) 99.55%), url("../images/teamImg.png");
+background: url("../images/teamImg.png");
 background-repeat: no-repeat;
 background-size: cover;
 
@@ -216,12 +216,12 @@ background-size: contain;
 
 
 display: flex;
-justify-content: center;
+justify-content: end;
 align-items: center;
 flex-direction: column;
 }
 .footer-section1 p{
-height: 86px;
+
 font-family: 'Space Grotesk';
 font-style: normal;
 font-weight: 500;
@@ -232,13 +232,41 @@ text-align: center;
 
 color: #FFFFFF;
 }
+.inner-footer-section1{
+background: rgba(0, 0, 0, 0.65);
+border-radius: 12px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 12px 31px;
+}
+
+
+.inner-footer-section1 button{
+
+padding: 19px 16px;
+width: 140px;
+margin: auto;
+padding: 9px 0px;
+/* width: 121px; */
+
+
+background: #FFFFFF;
+border-radius: 4px;
+margin-top: 23px;
+}
+.inner-footer-section1 button:hover{
+  background-color: #fbb03b;
+  color: #F4F4F4;
+}
 .footer-section2{
     /* background: linear-gradient(90.56deg, rgba(10, 47, 140, 0.8) 0.49%, rgba(37, 137, 202, 0.8) 99.55%); */
-    background: linear-gradient(90.56deg, rgba(10, 47, 140, 0.8) 0.40%, rgba(37, 137, 202, 0.8) 96.55%), url("../images/mapjpg.jpeg");
+  background: linear-gradient(90.56deg, rgba(10, 47, 140, 0.5) 0.40%, rgba(37, 137, 202, 0.5) 96.55%), url("../images/mapjpg.jpeg");
     background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 500px;
 
 
   background-position-x: center;
@@ -1059,7 +1087,7 @@ color: #FFFFFF;
   .footer-section1{
   width: 100%;
   height: 655px;
-  background: linear-gradient(90.56deg, rgba(10, 47, 140, 0.8) 0.49%, rgba(37, 137, 202, 0.8) 99.55%), url("../images/teamImg.png");
+  background: url("../images/teamImg.png");
   background-repeat: no-repeat;
   background-size: cover;
   
@@ -1072,12 +1100,11 @@ color: #FFFFFF;
   
   
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   flex-direction: column;
   }
   .footer-section1 p{
-  height: 86px;
   font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 500;
@@ -1117,7 +1144,7 @@ color: #FFFFFF;
       width: 200px;
        z-index: 1;
        position: absolute;
-       bottom: 180px;
+       bottom: 150px;
        left: 43%;
   }
   .footer-section2 button{
@@ -1127,7 +1154,7 @@ color: #FFFFFF;
       width: 90px;
       height: 45px;
       left: 48%;
-      bottom: 120px;
+      bottom: 90px;
       background: #FFFFFF;
       border-radius: 4px;
       color: #3A7EF8;
