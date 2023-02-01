@@ -76,12 +76,11 @@ function Jobdeatils({ data }) {
             >
               <div className="left-sides">
                 <div className="left-sides-left-innerdiv">
-                <img src={salary} id="img1"></img>
+                  <img src={salary} id="img1"></img>
                 </div>
-                
+
                 <div className="left-sides-innerdiv">
-                  {/* <h2>{data.salary}</h2> */}
-                  <h2>15-20 LPA</h2>
+                  <h2>{data.salary}</h2>
                   <p>Yearly salary </p>
                 </div>
               </div>
@@ -92,7 +91,7 @@ function Jobdeatils({ data }) {
                 <div className="mid-sides-left-innerdiv">
                   <img src={experience} id="img2"></img>
                 </div>
-                
+
                 <div className="mid-side-innerdiv">
                   <h2>{data.experience} Year</h2>
                   <p>Experience </p>
@@ -106,13 +105,10 @@ function Jobdeatils({ data }) {
             
                 </div> */}
                 <div className="left-side-innerdiv">
-                <img src={location} id="img3"></img>
+                  <img src={location} id="img3"></img>
                 </div>
-                
                 <div className="rigth-sides-innerdiv">
-                  {/* <h2>{data.Location}</h2> */}
-                  <h2>Noida Sector 62 </h2>
-                  <p>Location </p>
+                  <h2>{data.Location}</h2>
                 </div>
               </div>
             </div>
