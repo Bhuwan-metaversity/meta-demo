@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "applied_for_jobs",
+  "info": {
+    "singularName": "applied-for-job",
+    "pluralName": "applied-for-jobs",
+    "displayName": "Applied for job",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "Email": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Phone": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "max": 999999999999,
+      "min": 999999
+    },
+    "Message": {
+      "type": "text",
+      "required": true,
+      "minLength": 1
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    }
+  }
+}

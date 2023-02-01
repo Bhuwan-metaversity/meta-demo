@@ -7,6 +7,7 @@ const Headings = ({ title, description }) => {
       {description && (
         <p className="mt-4 text-2xl text-neutral-500">{description}</p>
       )}
+    
     </header>
   )
 }

@@ -20,7 +20,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@mui/icons-material": "^5.10.6",
+    "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.10.6",
     "formik": "^2.2.9",
     "framer-motion": "6.2.4",
@@ -38,8 +38,12 @@
     "gatsby-transformer-sharp": "^4.6.0",
     "postcss": "^8.4.6",
     "react": "^17.0.1",
+    "react-bootstrap": "^2.7.0",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-markdown": "^8.0.4",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^6.6.1",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1"
   },

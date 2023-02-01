@@ -1,0 +1,463 @@
+.popUpwrapper{
+    background-color: rgb(226, 230, 233);
+    width: 100%;
+    height: 18cm;
+    border-radius: 10px;
+    margin: auto;
+  }
+  
+  .popUpwrapper h1{
+    padding-left: 28%;
+    padding-top: 10px;
+  height: 3px;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 108%;
+  color: #060606;
+  }
+  .popUpwrapper p{
+  height: 30px;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  height: 72px;
+  width: 100%;
+  color: #060606;
+  padding-top: 20px;
+  }
+  
+.popUpwrapper{
+    padding: 20px 0 40px;
+    height: auto !important;
+}
+
+  form{
+    margin:auto;
+padding:0 10px;
+  width: 80%
+  
+  }
+
+  .popUpwrapper button{
+       
+    margin-left: 40%;
+    margin-top:20%;
+    background: #3A7EF8;
+    border-radius: 4px;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  color: #FFFFFF;
+
+  }
+
+.submitbtnwrapper button{
+margin: 0!important;
+padding: 5px 10px;
+}
+
+.submitbtnwrapper button:hover{
+  background-color: #FBB03B;
+  color: #F4F4F4;
+}
+
+.fileinputholder{
+    /* padding: 20px 0; */
+    background: #F4F8FF;
+    margin: 20px auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fileinputholder label{
+    margin-bottom: 20px;
+}
+
+.fileinputholder input[type="file"]{
+    padding: 14px 90px;
+    margin-top: 0 !important;
+}
+
+  .popUpwrapper input {
+    align-items: center;
+    padding-left: 10px;
+    height: 30px;
+    width: 100%;
+    margin-top: 15px;
+    outline:none
+  }
+  
+  .popUpwrapper p{
+    width: 100%;
+    font-size: 15px;
+  }
+  
+  
+  form input{
+    /* border: none !important;
+    border-bottom: 1px solid #ccc !important; */
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  form input[type="file"]{
+    border: none !important;
+  }
+  
+  .popUpwrapper .upload-resume{
+    height: 80px;
+    background: #F4F8FF;
+  }
+
+
+
+  @media screen and (max-width: 480px) {  
+.popUpwrapper{
+    background-color: rgb(226, 230, 233);
+    width: 100%;
+    height: 18cm;
+    border-radius: 10px;
+    margin: auto;
+  }
+  
+  .popUpwrapper h1{
+    padding-left: 24%;
+    /* padding-top: 10px; */
+  /* height: 3px; */
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 108%;
+  color: #060606;
+  }
+  .popUpwrapper p{
+  /* height: 30px; */
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  /* height: 72px; */
+  width: 100%;
+  color: #060606;
+  /* padding-top: 20px; */
+  }
+  
+  form{
+    margin:auto;
+  
+  width: 80%
+  
+  }
+  .popUpwrapper button{
+   
+    margin-left: 23%;
+    /* margin-top:25%; */
+    background: #3A7EF8;
+    border-radius: 4px;
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  color: #FFFFFF;
+
+  }
+
+.submitbtnwrapper button{
+margin: 0 !important;
+}
+
+.fileinputholder{
+    /* padding: 20px 0; */
+    background: #F4F8FF;
+    margin: 20px auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fileinputholder label{
+    margin-bottom: 20px;
+}
+
+.fileinputholder input[type="file"]{
+    padding: 24px 10px;
+    margin-top: 0 !important;
+}
+
+  .popUpwrapper input {
+    align-items: center;
+    padding-left: 10px;
+    height: 30px;
+    border:solid;
+    width: 100%;
+    margin-top: 15px;
+    outline:none
+  }
+  
+  .popUpwrapper p{
+    width: 100%;
+    font-size: 15px;
+  }
+  
+  
+  form input{
+    /* border: none !important;
+    border-bottom: 1px solid #ccc !important; */
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  form input[type="file"]{
+    border: none !important;
+  }
+  
+  .popUpwrapper .upload-resume{
+    height: 80px;
+    background: #F4F8FF;
+  }
+  
+  /* label{
+  position: relative;
+  top: 15px;
+  left: 12px;
+  } */
+  
+  }
+
+
+
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .popUpwrapper{
+        background-color: rgb(226, 230, 233);
+        width: 100%;
+        height: 18cm;
+        border-radius: 10px;
+        margin: auto;
+      }
+      
+      .popUpwrapper h1{
+        padding-left: 24%;
+        /* padding-top: 10px; */
+      /* height: 3px; */
+      font-family: 'Space Grotesk';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 108%;
+      color: #060606;
+      }
+      .popUpwrapper p{
+      /* height: 30px; */
+      font-family: 'Space Grotesk';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      /* height: 72px; */
+      width: 100%;
+      color: #060606;
+      /* padding-top: 20px; */
+      }
+      
+      form{
+        margin:auto;
+      
+      width: 80%
+      
+      }
+      .popUpwrapper button{
+       
+        margin-left: 23%;
+        /* margin-top:25%; */
+        background: #3A7EF8;
+        border-radius: 4px;
+      font-family: 'Space Grotesk';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      color: #FFFFFF;
+    
+      }
+    
+    .submitbtnwrapper button{
+    margin: 0 !important;
+   
+    }
+    
+    .fileinputholder{
+        /* padding: 20px 0; */
+        background: #F4F8FF;
+        margin: 20px auto;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .fileinputholder label{
+        margin-bottom: 20px;
+    }
+    
+    .fileinputholder input[type="file"]{
+        padding: 14px 90px;
+        margin-top: 0 !important;
+    }
+    
+      .popUpwrapper input {
+        align-items: center;
+        padding-left: 10px;
+        height: 30px;
+        border:solid;
+        width: 100%;
+        margin-top: 15px;
+        outline:none
+      }
+      
+      .popUpwrapper p{
+        width: 100%;
+        font-size: 15px;
+      }
+      
+      
+      form input{
+        /* border: none !important;
+        border-bottom: 1px solid #ccc !important; */
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+      
+      form input[type="file"]{
+        border: none !important;
+      }
+      
+      .popUpwrapper .upload-resume{
+        height: 80px;
+        background: #F4F8FF;
+      }
+      
+     
+      
+      }
+
+
+      @media screen and (min-width: 769px) and (max-width: 1439px) {   
+      .popUpwrapper{
+        background-color: rgb(226, 230, 233);
+        width: 100%;
+        height: 18cm;
+        border-radius: 10px;
+        margin: auto;
+      }
+      
+      .popUpwrapper h1{
+        padding-left: 24%;
+        /* padding-top: 10px; */
+      /* height: 3px; */
+      font-family: 'Space Grotesk';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 108%;
+      color: #060606;
+      }
+      .popUpwrapper p{
+      /* height: 30px; */
+      font-family: 'Space Grotesk';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      /* height: 72px; */
+      width: 100%;
+      color: #060606;
+      /* padding-top: 20px; */
+      }
+      
+      form{
+        margin:auto;
+      
+      width: 80%
+      
+      }
+      .popUpwrapper button{
+       
+        margin-left: 23%;
+        /* margin-top:25%; */
+        background: #3A7EF8;
+        border-radius: 4px;
+      font-family: 'Space Grotesk';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      color: #FFFFFF;
+    
+      }
+    
+    .submitbtnwrapper button{
+    margin: 0 !important;
+  
+    }
+    
+    .fileinputholder{
+        /* padding: 20px 0; */
+        background: #F4F8FF;
+        margin: 20px auto;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .fileinputholder label{
+        margin-bottom: 20px;
+    }
+    
+    .fileinputholder input[type="file"]{
+        padding: 14px 90px;
+        margin-top: 0 !important;
+    }
+    
+      .popUpwrapper input {
+        align-items: center;
+        padding-left: 10px;
+        height: 30px;
+        border:solid;
+        width: 100%;
+        margin-top: 15px;
+        outline:none
+      }
+      
+      .popUpwrapper p{
+        width: 100%;
+        font-size: 15px;
+      }
+      
+      
+      form input{
+        /* border: none !important;
+        border-bottom: 1px solid #ccc !important; */
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+      
+      form input[type="file"]{
+        border: none !important;
+      }
+      
+      .popUpwrapper .upload-resume{
+        height: 80px;
+        background: #F4F8FF;
+      }
+    }
+      

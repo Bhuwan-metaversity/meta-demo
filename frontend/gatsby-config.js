@@ -34,6 +34,9 @@ module.exports = {
             singularName: "author",
           },
           {
+            singularName: "job",
+          },
+          {
             singularName: "industry",
           },
           {

@@ -5,7 +5,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Define a template for blog post
   const articlePost = path.resolve("./src/templates/article-post.js")
-
+  const jd = path.resolve("./src/templates/jd.js")
   const result = await graphql(
     `
       {
@@ -13,6 +13,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           nodes {
             title
             slug
+          }
+        }
+        allStrapiJob {
+          nodes {
+            id
           }
         }
       }
@@ -27,9 +32,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     return
   }
-
   const articles = result.data.allStrapiArticle.nodes
-
+  const jobs = result.data.allStrapiJob.nodes
   if (articles.length > 0) {
     articles.forEach((article) => {
       createPage({
@@ -41,4 +45,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+  if (jobs.length > 0) {
+    jobs.forEach((JD) => {
+      createPage({
+        path: `/job/${JD.id}`,
+        component: jd,
+        context: {
+          slug: JD.id,
+        },
+      })
+    })
+  }
 }
+
+
+
+

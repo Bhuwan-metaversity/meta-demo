@@ -11,6 +11,7 @@ import RequestCallButton from "../components/requestCallButton"
 import { motion } from "framer-motion"
 import { PlayArrow } from "@mui/icons-material"
 import FooterDetails from "../components/FooterDetails"
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 const IndexPage = ({ data }) => {
   const { allStrapiHeroBanner, strapiBackground } = data

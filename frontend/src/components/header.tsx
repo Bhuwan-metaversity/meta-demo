@@ -3,7 +3,7 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import MetaLogo from "../images/new-png.png";
 import { Collapse, Menu, MenuItem, useMediaQuery } from "@mui/material";
 import RequestCallButton from "./requestCallButton";
-import { KeyboardArrowDown } from "@mui/icons-material";
+import { Height, KeyboardArrowDown } from "@mui/icons-material";
 // const Header = () => {
 //   const [hoverOn, setHoverOn] = React.useState("")
 //   const [open, setOpen] = React.useState(false)
@@ -112,7 +112,6 @@ interface Props {
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact"];
-
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -126,8 +125,8 @@ export default function DrawerAppBar(props: Props) {
         nodes {
           name
           id
-        }
-      }
+        }   
+      }  
       allStrapiArticle {
         nodes {
           ServiceName
@@ -227,7 +226,7 @@ export default function DrawerAppBar(props: Props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex",  }}>
       <AppBar component="nav" elevation={0}>
         <Toolbar sx={{ background: "#fff" }}>
           <IconButton
@@ -340,7 +339,7 @@ export default function DrawerAppBar(props: Props) {
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component="main" >
         <Toolbar />
       </Box>
     </Box>
