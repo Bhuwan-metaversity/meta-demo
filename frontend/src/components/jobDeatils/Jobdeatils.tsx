@@ -1,21 +1,18 @@
-import { ApplyJobDailog } from './ApplyJobDailog';
+import { ApplyJobDailog } from "./ApplyJobDailog";
 import React, { useState } from "react";
 import { render } from "react-dom";
 import "../../components/jobDeatils/jobDeatils.css";
 import salary from "../../../static/salary.png";
 import experience from "../../../static/Group.png";
-import location from "../../../static/Location.png"
+import location from "../../../static/Location.png";
 import Modalpopup from "../modal/Modalpopup";
 import FooterDetails from "../FooterDetails";
-import ReactMarkdown from "react-markdown"
-import  StyledMarkdown from "./MarkDown"
+import ReactMarkdown from "react-markdown";
+import StyledMarkdown from "./MarkDown";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import LeftSide from './LeftSide';
+import LeftSide from "./LeftSide";
 
-
-import {
-  Button
-} from "@mui/material";
+import { Button } from "@mui/material";
 import { Link } from "gatsby";
 // import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
@@ -30,14 +27,10 @@ function Jobdeatils({ data }) {
     setOpen(true);
   };
 
-
   const handleClose = () => {
     setOpen(false);
   };
 
-
-  
-  
   return (
     <>
       <div className="jdCaintanier">
@@ -48,11 +41,11 @@ function Jobdeatils({ data }) {
               <div className="top-section-detail">
                 <div>
                   <h2>{data.jobRole} </h2>
-                                  {/* -------  Split will Break Arr in Parts, then we will print split index */}
-                  <p>{data?.createdAt.split("T")[0]}</p>         
+                  {/* -------  Split will Break Arr in Parts, then we will print split index */}
+                  <p>{data?.createdAt.split("T")[0]}</p>
                 </div>
 
-                <div> 
+                <div>
                   <Button
                     onClick={handleClickOpen}
                     style={{
@@ -82,55 +75,55 @@ function Jobdeatils({ data }) {
               }}
             >
               <div className="left-sides">
+                <div className="left-sides-left-innerdiv">
                 <img src={salary} id="img1"></img>
-                <div className="left-sides-innerdiv"> 
+                </div>
+                
+                <div className="left-sides-innerdiv">
                   {/* <h2>{data.salary}</h2> */}
                   <h2>15-20 LPA</h2>
                   <p>Yearly salary </p>
                 </div>
               </div>
- 
 
-           {/* <LeftSide></LeftSide> */}
-                  
+              {/* <LeftSide></LeftSide> */}
 
               <div className="mid-sides">
-                <img src={experience} id="img2"></img>
+                <div className="mid-sides-left-innerdiv">
+                  <img src={experience} id="img2"></img>
+                </div>
+                
                 <div className="mid-side-innerdiv">
                   <h2>{data.experience} Year</h2>
                   <p>Experience </p>
                 </div>
               </div>
 
-{/* <LeftSide h2={data.experience} p="Experience" ></LeftSide> */}
+              {/* <LeftSide h2={data.experience} p="Experience" ></LeftSide> */}
 
               <div className="right-sides">
                 {/* <div className='right-sides-left-innerdiv'>
             
                 </div> */}
+                <div className="left-side-innerdiv">
                 <img src={location} id="img3"></img>
+                </div>
                 
                 <div className="rigth-sides-innerdiv">
-                {/* <h2>{data.Location}</h2> */}
-                  <h2>Noida  sector 62</h2>
-                <p>Location </p>
+                  {/* <h2>{data.Location}</h2> */}
+                  <h2>Noida Sector 62 </h2>
+                  <p>Location </p>
                 </div>
-               
               </div>
             </div>
 
             <div className="jd2">
               <h2>Job Description - </h2>
               {/* {console.log(data.JD.data?.JD,"jd")} */}
-              <ReactMarkdown>
-                {data.JD.data?.JD} 
-                </ReactMarkdown>
-                {/* {data.JD.data?.JD} */}
- 
-          
-            
+              <ReactMarkdown>{data.JD.data?.JD}</ReactMarkdown>
+              {/* {data.JD.data?.JD} */}
 
-                {/* <ul>
+              {/* <ul>
                   {data.JD}.map((item) => 
                   return{
                     <li>
@@ -139,8 +132,8 @@ function Jobdeatils({ data }) {
                   }
                   )
                 </ul> */}
-               
-                {/* A job description summarizes the essential responsibilities,
+
+              {/* A job description summarizes the essential responsibilities,
               activities, qualifications and skills for a role. Also known as a */}
               {/* </StyledMarkdown> */}
             </div>
@@ -163,13 +156,11 @@ function Jobdeatils({ data }) {
               <li>. Transition existing React web apps to React Native.</li>
               <li>. Add any other relevant responsibilities here</li> 
               </ul> */}
-
-
             </div>
 
             <div className="skills">
               <h1>skills -</h1>
-                 {/* {data.skills.data?.skills} */}
+              {/* {data.skills.data?.skills} */}
               <ReactMarkdown children={data.skills.data?.skills} />
               {/* <ul>
                 <li>
@@ -305,9 +296,7 @@ function Jobdeatils({ data }) {
         </DialogActions>
       </Dialog> */}
 
-<ApplyJobDailog   open={open} handleClose={handleClose} />
-
-    
+      <ApplyJobDailog open={open} handleClose={handleClose} />
 
       <FooterDetails></FooterDetails>
     </>

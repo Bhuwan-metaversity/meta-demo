@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'gatsby';   
 import img from "../images/hero-banner-bgImg.png";
 import "../styles/contact.css";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -159,8 +160,12 @@ const contactUs = () => {
           <div className="footer-contact-caintanier">
             <div className="footer-section1">
               {/* <img src={teamImg}></img> */}
+              <div className="inner-footer-section1">
               <p>Hire <span style={{ color: "#FBB03B" }}>ON-Demand</span>  project developers & turn </p>
               <p>YOUR IDEA INTO <span style={{ color: "#FBB03B" }}>REALITY</span>...</p>
+                
+                 <Link to='/careers'> <button>Explore More</button></Link>
+              </div>
 
             </div>
 
