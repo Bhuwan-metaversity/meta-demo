@@ -80,8 +80,8 @@ function Jobdeatils({ data }) {
                 </div>
                 
                 <div className="left-sides-innerdiv">
-                  {/* <h2>{data.salary}</h2> */}
-                  <h2>15-20 LPA</h2>
+                  <h2>{data.salary}</h2>
+                  {/* <h2>15-20 LPA</h2> */}
                   <p>Yearly salary </p>
                 </div>
               </div>
@@ -110,8 +110,8 @@ function Jobdeatils({ data }) {
                 </div>
                 
                 <div className="rigth-sides-innerdiv">
-                  {/* <h2>{data.Location}</h2> */}
-                  <h2>Noida Sector 62 </h2>
+                  <h2>{data.Location}</h2>
+                  {/* <h2>Noida Sector 62 </h2> */}
                   <p>Location </p>
                 </div>
               </div>

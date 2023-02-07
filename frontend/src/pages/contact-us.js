@@ -64,10 +64,12 @@ const contactUs = () => {
                 <div className="left-input-section">
                   <div className="left-input1">
                     <LocationOnIcon style={{ color: "white" }} />
+                 
                     <p>
                       Suite 607,C-51,BSI Business Park <br /> Sector 62,Noida -
                       201309
                     </p>
+                    
                   </div>
 
                   <div className="left-input2">

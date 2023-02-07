@@ -99,6 +99,7 @@ export const query = graphql`
     allStrapiJob {
       nodes {
         workType
+        slug
         id
         vacancy
         jobType

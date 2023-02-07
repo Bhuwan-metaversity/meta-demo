@@ -22,6 +22,7 @@ const AboutPage = () => {
 
   return (
     <Layout> 
+      
       {/* <Seo seo={seo} />
       <Headings title={strapiAbout.title} />
       <BlocksRenderer blocks={blocks} /> */}
