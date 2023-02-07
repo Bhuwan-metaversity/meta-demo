@@ -25,8 +25,9 @@ export const query = graphql`
   query ($slug: String) {
     strapiJob(id: {eq: $slug}) {
       Location
+      slug
       createdAt
-      jobRole
+      jobRole 
       JD {
         data {
           JD

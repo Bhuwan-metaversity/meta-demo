@@ -1,0 +1,98 @@
+.team-image img {
+    width: 245px;
+    /* display: block; */
+    margin: auto;
+}
+.p-r{
+    position: relative !important;
+}
+
+.team-detail{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.58);;
+}
+.team-detail h2{
+font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+color: #FFFFFF;
+text-align: center;
+
+}
+.team-detail p{
+font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+text-align: center;
+color: #FFFFFF;
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .team-detail h2{
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 10px;
+        color: #FFFFFF;
+        text-align: center;
+        
+        } 
+        .team-detail p{
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            text-align: center;
+            color: #FFFFFF;
+            }
+}
+
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .team-detail h2{
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 10px;
+        color: #FFFFFF;
+        text-align: center;
+        
+        } 
+        .team-detail p{
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            text-align: center;
+            color: #FFFFFF;
+            }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1600px)  {    
+    .team-detail h2{
+        font-family: 'Space Grotesk';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 15px;
+        color: #FFFFFF;
+        text-align: center;
+        
+        } 
+        .team-detail p{
+            font-family: 'Space Grotesk';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            text-align: center;
+            color: #FFFFFF;
+            }
+}

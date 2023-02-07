@@ -45,6 +45,7 @@
   font-size: 80px;
   line-height: 108%;
   color: #ffffff;
+  text-align: justify;
 }
 
 .div1 .arrow-line {
@@ -66,6 +67,7 @@
   font-size: 16px;
   color: #ffffff;
   margin-top: 40px;
+  text-align: justify;
 }
 
 .div2 {

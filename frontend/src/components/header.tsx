@@ -101,6 +101,7 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import { useTheme } from "@emotion/react";
 
 interface Props {
   /**
@@ -113,6 +114,8 @@ interface Props {
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact"];
 export default function DrawerAppBar(props: Props) {
+  const theme = useTheme();
+  console.log(theme,"theme")
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -157,8 +160,8 @@ export default function DrawerAppBar(props: Props) {
         expandable: false,
       },
       {
-        to: "/",
-        name: "Company",
+        to: "/AboutUs",
+        name: "About Us",
         expandable: false,
       },
       {
@@ -194,7 +197,8 @@ export default function DrawerAppBar(props: Props) {
     ],
     []
   );
-  const matches = useMediaQuery("(min-width:600px)");
+
+  const matches = useMediaQuery("(min-width: 1200px)");
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -234,7 +238,7 @@ export default function DrawerAppBar(props: Props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { lg: "none" } }}
           >
             <MenuIcon color="action" />
           </IconButton>
@@ -265,7 +269,7 @@ export default function DrawerAppBar(props: Props) {
             <Box
               flexDirection={"row"}
               zIndex={1000000}
-              sx={{ display: { xs: "none", sm: "block" }, mx: "auto" }}
+              sx={{ display: { xs: "none", lg: "block" }, mx: "auto" }}
             >
               {links.map(({ to, name, expandable, sublinks }) => (
                 <Link
@@ -329,7 +333,7 @@ export default function DrawerAppBar(props: Props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
+            display: { xs: "block", lg: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,

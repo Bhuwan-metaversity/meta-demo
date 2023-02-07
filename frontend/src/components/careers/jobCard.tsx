@@ -8,7 +8,7 @@ import Jobdeatils from "../jobDeatils/Jobdeatils";
 
 
 
-const JobCard = ({setOpen, bg, ...rest}) => {
+const JobCard = ({setOpen, bg,slug, ...rest}) => {
 // const [open, setOpen] = useState(false);
 console.log(rest)
   const handleClickOpen = () => {
@@ -17,7 +17,7 @@ console.log(rest)
     setOpen(true);
   };
   // const nav = useNavigate() 
-
+console.log("slug",slug, rest)
   return (
     <div className="jd" style={{ background:bg }}>
       <div className="container">
@@ -36,7 +36,7 @@ console.log(rest)
           <Link style={{
           // width:'100%',
           color:'#3A7EF8',
-          }}  to={`/job/${rest.id}`} >
+          }}  to={`/job/${slug}`} >
             {/* <button id="btn1"></button> */}
           Job Deatils
           </Link>

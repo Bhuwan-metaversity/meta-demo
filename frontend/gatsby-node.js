@@ -18,6 +18,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         allStrapiJob {
           nodes {
             id
+            slug
           }
         }
       }
@@ -48,7 +49,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (jobs.length > 0) {
     jobs.forEach((JD) => {
       createPage({
-        path: `/job/${JD.id}`,
+        path: `/job/${JD.slug}`,
         component: jd,
         context: {
           slug: JD.id,

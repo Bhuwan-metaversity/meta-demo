@@ -109,6 +109,8 @@ function Jobdeatils({ data }) {
                 </div>
                 <div className="rigth-sides-innerdiv">
                   <h2>{data.Location}</h2>
+                  <p>Location </p>
+
                 </div>
               </div>
             </div>
