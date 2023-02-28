@@ -23,11 +23,10 @@
       "unique": true
     },
     "Phone": {
-      "type": "integer",
+      "type": "biginteger",
       "required": true,
       "unique": true,
-      "max": 999999999999,
-      "min": 999999
+      "private": true
     },
     "Message": {
       "type": "text",

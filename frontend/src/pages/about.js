@@ -1,6 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Layout from "../components/layout"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Layout from "../components/layout";
 
 const AboutPage = () => {
   // const { strapiAbout } = useStaticQuery(graphql`
@@ -21,13 +21,13 @@ const AboutPage = () => {
   // }
 
   return (
-    <Layout> 
+    <Layout>
       
       {/* <Seo seo={seo} />
       <Headings title={strapiAbout.title} />
       <BlocksRenderer blocks={blocks} /> */}
     </Layout>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

@@ -13,6 +13,7 @@
     "wait-on": "5.2.1"
   },
   "dependencies": {
-    "pg": "^8.8.0"
+    "pg": "^8.8.0",
+    "react-reveal": "^1.2.2"
   }
 }

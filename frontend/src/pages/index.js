@@ -11,14 +11,16 @@ import RequestCallButton from "../components/requestCallButton"
 import { motion } from "framer-motion"
 import { PlayArrow } from "@mui/icons-material"
 import FooterDetails from "../components/FooterDetails"
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
-const IndexPage = ({ data }) => {
+
+
+const IndexPage = ({ data, location }) => {
   const { allStrapiHeroBanner, strapiBackground } = data
   const [hovered, setHovered] = useState(false)
+  
   const theme = useTheme()
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo seo={{ metaTitle: "Home" }} />
       <main>
         <Vertical2by2Slider
@@ -60,7 +62,7 @@ const IndexPage = ({ data }) => {
                 <GatsbyImage
                   // fadeIn
                   // objectFit={"contain"}
-                  // imgStyle={{ objectFit: "contain" }}
+                  imgStyle={{ objectFit: "contain" }}
                   style={{ width: "50vw", marginTop: "auto" }}
                   alt="hero"
                   // fluid={banner.hero_cover.localFile.childImageSharp.fluid}
