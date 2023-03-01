@@ -434,7 +434,8 @@ margin-top: 23px;
   color: #FFFFFF;
   }
   .footer-section2{
-      background: linear-gradient(90.56deg, rgba(10, 47, 140, 0.8) 0.49%, rgba(37, 137, 202, 0.8) 99.55%), url("../images/map.png");
+      background: linear-gradient(90.56deg, rgba(10, 47, 140, 0.8) 0.49%, rgba(37, 137, 202, 0.8) 99.55%);   
+      /* , url("../images/map.png") */
       position: relative;
       background-repeat: no-repeat;
       background-size: cover;

@@ -33,6 +33,8 @@ import Slider from "react-slick";
 import Button from "../components/Button/Buttons";
 import { Link } from "gatsby";
 import RequestCallButton from "../components/requestCallButton";
+import Fade from 'react-reveal/Fade'; 
+
 
 const Product = () => {
   const settings = {
@@ -49,6 +51,7 @@ const Product = () => {
   return (
     <Layout>
       <div className="wallet-hero-section">
+      <Fade left>
         <div className="hero-left-side">
           <h1>Cryptocurrency Wallet Development Company</h1>
           <p>
@@ -66,7 +69,8 @@ const Product = () => {
             </Link>
           </div>
         </div>
-
+        </Fade>
+        <Fade right>
         <div className="hero-right-side">
           <video
             poster=""
@@ -80,6 +84,7 @@ const Product = () => {
             <source type="video/mp4" src={Wallet_img} />
           </video>
         </div>
+        </Fade>
       </div>
 
       <div className="hero-slider-token">
@@ -99,6 +104,7 @@ const Product = () => {
       </div>
 
       <div className="Principles">
+      <Fade left>
         <div className="principes-content">
           <h1>Principles that build our culture and trust</h1>
           <p>
@@ -111,15 +117,21 @@ const Product = () => {
             <button className="product-page-button">More About Us</button>
           </Link>
         </div>
+        /</Fade>
+        <Fade right>
         <div className="principleImg">
           <img src={PrincipalImg} />
         </div>
+        </Fade>
       </div>
 
       <div className="business">
+      <Fade left>
         <div className="business-img">
           <img src={BusinessImg} />
         </div>
+        </Fade>
+        <Fade right>
         <div className="business-content">
           <h2>What We Do?</h2>
           <h1>Your business needs us</h1>
@@ -134,9 +146,11 @@ const Product = () => {
             <button className="product-page-button">More About Us</button>
           </Link>
         </div>
+        </Fade>
       </div>
 
       <div className="blockchain-technology">
+      <Fade left>
         <div className="blokchain-technology-content">
           <h1>We Aim for Excellence in Blockchain Technology</h1>
           <p>
@@ -150,6 +164,8 @@ const Product = () => {
             <button className="product-page-button">Lets Start</button>
           </Link>
         </div>
+        </Fade>
+        <Fade right>
         <div className="blockchain-technology-img">
           <section class="main-container">
             <div class="main">
@@ -208,6 +224,7 @@ const Product = () => {
             </div>
           </section>
         </div>
+        </Fade>
       </div>
 
       <div className="we-deliver">
@@ -338,6 +355,7 @@ const Product = () => {
       <div className="blockchain-development-process">
         <h1>BLOCKCHAIN DEVELOPMENT PROCESS</h1>
         <div className="bdp">
+        <Fade left>
           <div className="bdp-contant">
             <div className="anylysis ">
               <img src="https://res.cloudinary.com/infograinsdevelop/image/upload/v1/media/blockchain_process/Client_e8suso" />
@@ -376,9 +394,12 @@ const Product = () => {
               </p>
             </div>
           </div>
+          </Fade>
+          <Fade right>
           <div className="bdp-content-rightSide ">
             <h1>BLOCKCHAIN DEVELOPMENT PROCESS</h1>
           </div>
+          </Fade>
         </div>
       </div>
 

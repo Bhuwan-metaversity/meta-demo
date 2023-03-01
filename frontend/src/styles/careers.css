@@ -131,10 +131,10 @@
 }
 .jd:hover {
   transform: scale(1.02);
-  background-color: #fbb03b;
+  /* background-color: #fbb03b; */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin: 20px;
-  margin-inline: 3%;
+  /* margin: 20px;
+  margin-inline: 3%; */
 }
 .wrapper {
   display: flex;

@@ -1,6 +1,7 @@
 // import * as React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby";
-import MetaLogo from "../images/MV LOGO.png";
+// import MetaLogo from "../images/MV LOGO.png";
+import MetaLogo from "../images/metaversityLogo.png"
 import { Collapse, Menu, MenuItem, useMediaQuery } from "@mui/material";
 import RequestCallButton from "./requestCallButton";
 import { Height, KeyboardArrowDown } from "@mui/icons-material";
@@ -173,7 +174,7 @@ export default function DrawerAppBar(props: Props) {
       {
         to: "/Services",
         name: "Services",
-        expandable: true,
+        expandable: false,
         sublinks: allStrapiArticle?.nodes?.map(({ slug, ServiceName }) => ({
           to: "/service/" + slug,
           name: ServiceName,
@@ -183,7 +184,7 @@ export default function DrawerAppBar(props: Props) {
       {
         to: "/Product",
         name: "Product",
-        expandable: true,
+        expandable: false,
         sublinks: allStrapiIndustry?.nodes?.map(({ slug, name }) => ({
           to: "#",
           name,

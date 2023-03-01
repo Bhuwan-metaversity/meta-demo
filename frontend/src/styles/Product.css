@@ -559,7 +559,7 @@ font-size: 40px;
 margin: auto;
 padding: 0px 10px 0px 10px;
 text-align: center;
-color: black;
+color: #36bbc2;
   }
   .bdp{
     width: 100%;
@@ -1227,7 +1227,7 @@ font-size: 25px;
 margin: auto;
 padding: 0px 10px 0px 10px;
 text-align: center;
-color: black;
+color: #36bbc2;
   }
   .bdp{
     width: 100%;
@@ -1754,7 +1754,6 @@ color: #FFFFFF;
     display: grid;
   grid: 300px /  auto;
   gap: 10px;
-  margin-top: unset;
 }
 .deliver-cards .card{
     background-color: #36bbc2;
@@ -1893,7 +1892,7 @@ font-size: 20px;
 margin: auto;
 padding: 0px 10px 0px 10px;
 text-align: center;
-color: black;
+color:#36bbc2;
   }
   .bdp{
     width: 100%;
@@ -2548,7 +2547,8 @@ color: black;
   margin: auto;
   padding: 0px 10px 0px 10px;
   text-align: center;
-  color: black;
+  color: #36bbc2;
+
     }
     .bdp {
       width: 100%;
@@ -3194,7 +3194,8 @@ color: black;
     margin: auto;
     padding: 0px 10px 0px 10px;
     text-align: center;
-    color: black;
+    color: #36bbc2;
+    
       }
       .bdp{
         width: 100%;
@@ -3846,7 +3847,7 @@ font-size: 40px;
 margin: auto;
 padding: 0px 10px 0px 10px;
 text-align: center;
-color: black;
+color: #36bbc2;
   }
   .bdp{
     width: 100%;

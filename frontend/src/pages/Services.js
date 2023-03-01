@@ -14,7 +14,8 @@ import { tokenArr, NftServiceArr } from "../components/NftTokens/NftTokenDB"; //
 import Blog1 from "../images/blog1.png";
 import Blog2 from "../images/blog2.png";
 import Blog3 from "../images/blog3.png";
-import Patners from "../images/patners.png";
+import Patners1 from "../images/patner1.png";
+import Patners2 from "../images/patner2.png"
 import Marquee from "react-fast-marquee";
 import Faq from "../components/faq/Faq";
 import FooterDetails from "../components/FooterDetails";
@@ -279,10 +280,10 @@ const Services = ({location}) => {
 
           <Marquee direction="left" style={{ height: "auto" }}>
             {" "}
-            <img src={Patners} style={{ height: "100px" }} />{" "}
+            <img src={Patners1} style={{ height: "100px" }} />{" "}
           </Marquee>
           <Marquee direction="right">
-            <img src={Patners} style={{ height: "100px" }} />
+            <img src={Patners2} style={{ height: "100px" }} />
           </Marquee>
         </div>
 
