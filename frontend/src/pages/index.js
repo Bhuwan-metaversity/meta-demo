@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
 import TopServices from "../components/TopServices"
 import Vertical2by2Slider from "../components/vertical2by2AutoSlider"
 import Industries from "../components/Industies"
@@ -11,6 +10,7 @@ import RequestCallButton from "../components/requestCallButton"
 import { motion } from "framer-motion"
 import { PlayArrow } from "@mui/icons-material"
 import FooterDetails from "../components/FooterDetails"
+import Seo from "../components/seo";
 
 
 

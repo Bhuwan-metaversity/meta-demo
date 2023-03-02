@@ -6,6 +6,7 @@ import locationOfMetaversity from "../images/locationOfMetaversity.png";
 import Layout from "../components/layout";
 import { graphql, useStaticQuery } from "gatsby";
 import ContactusForm from "../components/ConrtactUsForm/contactusForm";
+import Seo from "../components/seo";
 
 
 
@@ -31,6 +32,7 @@ const contactUs = ({location}) => {
   return (
     <>
       <Layout location={location}>
+      <Seo seo={{metaTitle:"Contact"}} />
         <div className="contact-caintainer">
           <div className="header-contact-wrapper">
             <div className="contact-hero-section">

@@ -21,6 +21,7 @@ import Faq from "../components/faq/Faq";
 import FooterDetails from "../components/FooterDetails";
 import Fade from 'react-reveal/Fade'; 
 import Flip from 'react-reveal/Flip';
+import Seo from "../components/seo";
 
 
 
@@ -29,6 +30,7 @@ const Services = ({location}) => {
   return (
     <>
       <Layout location={location}>
+      <Seo seo={{metaTitle:"Services"}} />
    
         <div className="nft-hero-section-container">
           <img src={nft_hero_bannner} />

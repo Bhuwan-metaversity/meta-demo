@@ -9,6 +9,8 @@ import Modalpopup from "../components/modal/Modalpopup";
 import AOS from "aos"
 import "aos/dist/aos.css"
 import { StaticImage } from "gatsby-plugin-image";
+import Seo from "../components/seo";
+
 
 
 const Careers = ({ data, location }) => {
@@ -28,6 +30,7 @@ const Careers = ({ data, location }) => {
 
   return (
     <Layout location={location} >
+       <Seo seo={{metaTitle:"Careers"}} />
       <div className="div1">
         <div className="container">
           <div className="herobanner">

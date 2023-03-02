@@ -34,9 +34,10 @@ import Button from "../components/Button/Buttons";
 import { Link } from "gatsby";
 import RequestCallButton from "../components/requestCallButton";
 import Fade from 'react-reveal/Fade'; 
+import Seo from "../components/seo";
 
 
-const Product = () => {
+const Product = ({location}) => {
   const settings = {
     dots: false,
     arrow: false,
@@ -49,7 +50,8 @@ const Product = () => {
   };
 
   return (
-    <Layout>
+    <Layout location={location}>
+      <Seo seo={{metaTitle:"Product"}} />
       <div className="wallet-hero-section">
       <Fade left>
         <div className="hero-left-side">

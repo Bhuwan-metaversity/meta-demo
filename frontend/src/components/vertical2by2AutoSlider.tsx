@@ -81,22 +81,22 @@ const Vertical2by2Slider: React.FC<VSProps> = ({
           textAlign: "center",
         }}
       >
-        <Link to="https://twitter.com/MetaversityTech" target={"_blank"}>
+        <a href="https://twitter.com/MetaversityTech" target={"_blank"}>
           Linked In
-        </Link>
-        <Link
-          to="https://www.facebook.com/profile.php?id=100087924176394"
+        </a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100087924176394"
           target={"_blank"}
           style={{ margin: "40px" }}
         >
           Facebook
-        </Link>
-        <Link
-          to="https://www.linkedin.com/company/metaversity-technologies"
+        </a>
+        <a
+          href="https://www.linkedin.com/company/metaversity-technologies"
           target={"_blank"}
         >
           Twitter
-        </Link>
+        </a>
       </Box>
       {/* <Box
         className={styles.slideshowSlider}

@@ -10,7 +10,7 @@ import implement_Img from "../images/implement-img.png"
 import mission_Img from "../images/mission-img.png"
 import FooterDetails from "../components/FooterDetails";
 import Flip from 'react-reveal/Flip';
-// import AboutUsBackgroundImg from "../images/aboutUs1k.png"
+import Seo from "../components/seo";
 
 
  
@@ -19,6 +19,7 @@ import Flip from 'react-reveal/Flip';
 const AboutUs = ({location}) => {
   return (
     <Layout location={location}>
+       <Seo seo={{metaTitle:"About"}} />
       <>
         <div className="hero-caintanier1">
           <h1>About Us</h1>

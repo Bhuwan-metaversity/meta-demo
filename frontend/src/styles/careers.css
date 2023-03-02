@@ -33,7 +33,7 @@
   font-size: 80px;
   line-height: 108%;
   color: #ffffff;
-  text-align: justify;
+  text-align: left;
 }
 .div1 .arrow-line {
   width: 100px;
@@ -51,8 +51,8 @@
   font-weight: 400;
   font-size: 16px;
   color: #ffffff;
-  margin-top: 40px;
-  text-align: justify;
+  margin-top: 10px;
+  text-align: left;
 }
 .div2 {
   width: 100%;
@@ -287,7 +287,7 @@
     font-size: 16px;
     color: #ffffff;
     margin-top: unset;
-    text-align: justify;
+    text-align: left;
   }
   .div2 {
     width: 100%;
@@ -465,7 +465,7 @@
   .div1 .herobanner {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     justify-content: space-between;
   }
   .div1 .per60 {
@@ -481,6 +481,7 @@
     font-weight: 500;
     font-size: 30px;
     color: #ffffff;
+    margin-bottom: unset;
   }
   .div1 .arrow-line {
     width: 100px;
@@ -665,7 +666,7 @@
     align-items: center;
     padding: 10px;
     justify-content: space-between;
-    padding: 40px;
+    padding: unset;
   }
   .div1 .per60 {
     width: 60%;
@@ -678,8 +679,9 @@
     font-style: normal;
     width: 100%;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 45px;
     color: #ffffff;
+    margin-bottom: unset;
   }
   .div1 .arrow-line {
     width: 100px;
@@ -1073,7 +1075,7 @@
     font-family: "Space Grotesk";
     font-style: normal;
     font-weight: 500;
-    font-size: 80px;
+    font-size: 70px;
     line-height: 108%;
     color: #ffffff;
   }
@@ -1136,7 +1138,7 @@
     text-align: center;
     width: 30%;
     background: rgb(58, 126, 248);
-    border-radius: 0px;
+    border-radius: 10px;
     padding: 32px;
     margin: 0 10px 0px 15px;
     font-family: "Space Grotesk";

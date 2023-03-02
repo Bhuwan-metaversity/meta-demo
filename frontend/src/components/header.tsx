@@ -175,21 +175,21 @@ export default function DrawerAppBar(props: Props) {
         to: "/Services",
         name: "Services",
         expandable: false,
-        sublinks: allStrapiArticle?.nodes?.map(({ slug, ServiceName }) => ({
-          to: "/service/" + slug,
-          name: ServiceName,
-          expandable: false,
-        })),
+        // sublinks: allStrapiArticle?.nodes?.map(({ slug, ServiceName }) => ({
+        //   to: "/service/" + slug,
+        //   name: ServiceName,
+        //   expandable: false,
+        // })),
       },
       {
         to: "/Product",
         name: "Product",
         expandable: false,
-        sublinks: allStrapiIndustry?.nodes?.map(({ slug, name }) => ({
-          to: "#",
-          name,
-          expandable: false,
-        })),
+        // sublinks: allStrapiIndustry?.nodes?.map(({ slug, name }) => ({
+        //   to: "#",
+        //   name,
+        //   expandable: false,
+        // })),
       },
       {
         to: "/Careers",
@@ -246,6 +246,7 @@ export default function DrawerAppBar(props: Props) {
       }
     });
   }, [location?.pathname]);
+  console.log(location,"path")
   return (
     <Box sx={{ display: "flex" }}>
       <AppBar component="nav" elevation={0}>
